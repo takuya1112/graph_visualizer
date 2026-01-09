@@ -1,0 +1,43 @@
+#canvas {
+    border: 3px solid black;
+    position: relative;
+}
+
+#grid_button > button {
+    width: 10em;
+    height: 3em;
+}
+
+.chunk {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.chunk > div {
+    border: 2px solid black;
+    margin: 10px auto;
+
+    max-width: 400px;
+    transition: max-width 0.4s ease;
+}
+
+.chunk > div > img {
+    width: 100%;
+}
+
+.chunk > div > p {
+    margin: 0;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+@media (min-width: 431px) and (max-width: 850px) {
+    .chunk > div {
+        max-width: 300px;
+        
+    }
+}
+
