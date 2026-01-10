@@ -36,4 +36,6 @@ export function dfsStep() {
     return result;
 }
 
-
+export function dfsFinish() {
+    return stack.length == 0;
+}

@@ -1,6 +1,6 @@
 export function randomGrid(height, width) {
-    const maze_height = (height / 2) * 2 + 1;
-    const maze_width = (width / 2) * 2 + 1;
+    const maze_height = Math.floor(height / 2) * 2 + 1;
+    const maze_width = Math.floor(width / 2) * 2 + 1;
 
     const grid = Array.from({ length : maze_height }, () => 
         Array.from({ length : maze_width }, () => -1 )

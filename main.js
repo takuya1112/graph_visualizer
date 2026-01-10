@@ -1,6 +1,6 @@
 import { drawGrid, initCanvas, drawStep } from "./ui/canvas.js";
 import { randomGrid } from "./algolithm/random_gen.js";
-import { initDfs, dfsStep } from "./algolithm/dfs.js";
+import { initDfs, dfsStep, dfsFinish } from "./algolithm/dfs.js";
 
 let grid;
 const HEIGHT = 50;
@@ -16,9 +16,9 @@ function makeMaze() {
 function solveDfs() {
     initDfs(grid);
     drawStep([1, 1]);
-    setInterval(() => {
+    const interval = setInterval(() => {
         let res = dfsStep();
-        if (res.length == 0) clearInterval();
+        if (dfsFinish()) clearInterval(interval);
         for (let i = 0; i < res.length; i++) {
             drawStep(res[i]);
         }

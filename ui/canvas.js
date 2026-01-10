@@ -6,8 +6,8 @@ let COLUMNS;
 let CELL;
 
 export function initCanvas(row, columns, cell) {
-    ROWS = row;
-    COLUMNS = columns;
+    ROWS = Math.floor(row / 2) * 2 + 1;
+    COLUMNS = Math.floor(columns / 2) * 2 + 1;
     CELL = cell;
     
     canvas.height = ROWS * CELL;
