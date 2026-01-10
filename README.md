@@ -1,1 +1,1 @@
-# graph_visualizer
+# algorithm_visualizer
