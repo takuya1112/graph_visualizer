@@ -15,8 +15,6 @@ export function initDfs(grid) {
     stack = [[1, 1]];
 }
 
-
-
 export function dfsStep() {
     if (stack.length == 0) return [];
 
